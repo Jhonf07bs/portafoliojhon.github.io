@@ -1,0 +1,692 @@
+/*
+1. Posicionamiento
+2. Modelo de caja (box model)
+3. tipografía
+4. visuales
+5. Otros
+*/
+:root{
+    --black: #000000;
+    --dark-blue: #001425;
+    --red-brand: #F32424;
+    --yellow-brand: #F6E820;
+    --grey: #D1D1D1;
+    --just-white: #ffffff;
+}
+section [id]{
+    scroll-margin-top: 70px;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+    font-family: 'Source Code Pro', monospace;
+    background-color: var(--grey);
+    scroll-behavior: smooth;
+}
+header{
+    position: relative;
+    display: block;
+    width: 100%
+    min-width 320px;
+    height: 300px;
+    z-index: 5;
+}
+.nav-container{
+    position: fixed;
+    top: 0px;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-width: 318px;
+    height: 60px;
+    background-color: var(--grey);
+}
+.nav-container img{
+    width: 40px;
+    height: 40px;
+    margin-top: 0px;
+    margin-left: 10px;
+}
+.menu-container{
+    display: none;
+    justify-content: end;
+    align-content: center;
+    width: 50%;
+    min-width: 160px;
+    margin-right: 20px;
+}
+
+.header-container{
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    min-width: 320px;
+    height: 300px;
+    margin-top: 70px;
+}
+.header-container .profile-content{
+    width: 100%;
+    min-width: 320px;
+}
+.profile-content{
+    position: relative;
+}
+.profile-content .movil{
+    display: inline;
+    width: 100%;
+    height: 214px;
+}
+.profile-content .tablet{
+    display: none;
+}
+.content-profile-container{
+    position: absolute;
+}
+.profile-content .profile-content-body{
+    width: 80%;
+    margin-top: -170px;
+    margin-left: 20px;
+}
+.profile-content-body h1{
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 2.7rem;
+    color: var(--just-white);
+}
+.profile-content-body h1 span{
+    font-size: 2.6rem;
+    font-weight: 900;
+    color: var(--red-brand);
+}
+.profile-content-body p{
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6rem;
+    color: var(--just-white);
+}
+.button-cv{
+    position: sticky;
+    width: 100px;
+    height: 35px;
+    margin-top: 10px;
+    margin-left: calc(50% - 140px); 
+    z-index: 1;
+}
+.profile-cv{
+    width: 100px;
+    margin: auto;
+    border-radius: 10px;
+    background-color: var(--dark-blue); 
+    color: var(--red-brand);
+    font-size: 2rem;
+    font-weight: bold;
+    box-shadow: none;
+    border: 2px solid var(--red-brand);
+}
+.profile-cv:hover{
+    background-color: var(--red-brand);
+    color: var(--dark-blue);
+    box-shadow: 0px 4px 8px rgba(89, 73, 30, 20px);
+}
+main{
+    width: 100%;
+    min-width: 320px;
+    height: 2500px;
+    background-image: url(./assets/img/fondo\ \ proyectos.svg);
+    margin-top: -90px;
+}
+.main-projects-container{
+    position: relative;
+    display: block;
+}
+.main-projects-container .projects--title{
+    width: 300px;
+    height: 100px;
+}
+.projects--title h2{
+    position: absolute;
+    top: 30px;
+    left: 70px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: var(--red-brand);
+}
+.projects--title p{
+    position: absolute;
+    top: 80px;
+    left: 10px;
+    font-size: 1.8rem;
+    color: var(--just-white);
+}
+.main-cards-slider{
+    display: flex;
+    height: 350px;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+.card-container{
+    position: relative;
+    scroll-snap-align: center;
+    width: 70%;
+    min-width: 190px;
+    max-width: 300px;
+    height: 300px;
+    margin: 20px 5px 0;
+    padding: 10px;
+    background-color: var(--grey);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
+}
+.title-cards {
+    margin-left: 10px;
+    font-size: 1.8rem;
+    color: var(--just-white);
+}
+.card-container p{
+    font-size: 1rem;
+}
+.img1-project{
+    display: inline-block;
+    width: 90%;
+    margin-top: 20px;
+    margin-left: calc(50% - 77px);
+    height: 200px;
+    background-image: url(./assets/img/educación/area\ de\ ciencias-04.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.img2-project{
+    display: inline-block;
+    width: 90%;
+    margin-top: 20px;
+    margin-left: calc(50% - 77px);
+    height: 200px;
+    background-image: url(./assets/img/educación/area\ de\ tecnologia-03.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.img3-project{
+    display: inline-block;
+    width: 90%;
+    margin-top: 20px;
+    margin-left: calc(50% - 77px);
+    height: 200px;
+    background-image: url(./assets/img/educación/area\ humanidades\ y\ artes-02.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.img4-project{
+    display: inline-block;
+    width: 90%;
+    margin-top: 20px;
+    margin-left: calc(50% - 77px);
+    height: 200px;
+    background-image: url(./assets/img/educación/area\ matemáticas_Mesa\ de\ trabajo\ 1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.img5-project{
+    display: inline-block;
+    width: 90%;
+    margin-top: 20px;
+    margin-left: calc(50% - 77px);
+    height: 200px;
+    background-image: url(./assets/img/mockups/mockup\ gorra.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.img6-project{
+    display: inline-block;
+    width: 90%;
+    margin-top: 20px;
+    margin-left: calc(50% - 77px);
+    height: 200px;
+    background-image: url(./assets/img/mockups/mockup\ sueter.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.img7-project{
+    display: inline-block;
+    width: 90%;
+    margin-top: 20px;
+    margin-left: calc(50% - 77px);
+    height: 200px;
+    background-image: url(./assets/img/mockups/mockup\ tarjetas.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.img8-project{
+    display: inline-block;
+    width: 90%;
+    margin-top: 20px;
+    margin-left: calc(50% - 77px);
+    height: 200px;
+    background-image: url(./assets/img/mockups/mockup\ usb.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.card-container-2{
+    position: relative;
+    scroll-snap-align: center;
+    width: 70%;
+    min-width: 190px;
+    max-width: 300px;
+    height: 280px;
+    margin: 20px 5px 0;
+    padding: 10px;
+    background-color: var(--grey);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
+}
+.card-container-2 p{
+    font-size: 1rem;
+}
+.ugc-img1-project{
+    display: inline-block;
+    width: 90%;
+    margin-top: 20px;
+    margin-left: calc(50% - 77px);
+    height: 150px;
+    background-image: url(./assets/img/ugc/pieza\ gráfica\ flipster.png);
+    background-size: 150px 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.ugc-img2-project{
+    display: inline-block;
+    width: 90%;
+    margin-top: 20px;
+    margin-left: calc(50% - 77px);
+    height: 150px;
+    background-image: url(./assets/img/ugc/pieza\ overdrive.png);
+    background-size: 150px 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.ugc-img3-project{
+    display: inline-block;
+    width: 90%;
+    margin-top: 20px;
+    margin-left: calc(50% - 77px);
+    height: 150px;
+    background-image: url(./assets/img/ugc/pieza-biblioteca.jpg);
+    background-size: 150px 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.ugc-img4-project{
+    display: inline-block;
+    width: 90%;
+    margin-top: 20px;
+    margin-left: calc(50% - 77px);
+    height: 150px;
+    background-image: url(./assets/img/ugc/Piezas\ gráficas_dia\ del\ abogado.png);
+    background-size: 150px 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.design-img1-project{
+    display: inline-block;
+    width: 90%;
+    margin-top: 20px;
+    margin-left: calc(50% - 77px);
+    height: 150px;
+    background-image: url(./assets/img/diseño/arthur\ conan\ doyle\ 1.jpg);
+    background-size: 150px 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.design-img2-project{
+    display: inline-block;
+    width: 90%;
+    margin-top: 20px;
+    margin-left: calc(50% - 77px);
+    height: 150px;
+    background-image: url(./assets/img/diseño/fotografia.png);
+    background-size: 150px 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.design-img3-project{
+    display: inline-block;
+    width: 90%;
+    margin-top: 20px;
+    margin-left: calc(50% - 77px);
+    height: 150px;
+    background-image: url(./assets/img/diseño/poster\ morat\ banda.jpg);
+    background-size: 150px 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.photo-img1-project{
+    display: inline-block;
+    width: 90%;
+    margin-top: 20px;
+    margin-left: calc(50% - 77px);
+    height: 150px;
+    background-image: url(./assets/img/fotografía/telefono.JPG);
+    background-size: 150px 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.photo-img2-project{
+    display: inline-block;
+    width: 90%;
+    margin-top: 20px;
+    margin-left: calc(50% - 77px);
+    height: 150px;
+    background-image: url(./assets/img/fotografía/carro.JPG);
+    background-size: 150px 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.photo-img3-project{
+    display: inline-block;
+    width: 90%;
+    margin-top: 20px;
+    margin-left: calc(50% - 77px);
+    height: 150px;
+    background-image: url(./assets/img/fotografía/caja-8.jpg);
+    background-size: 150px 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.photo-img4-project{
+    display: inline-block;
+    width: 90%;
+    margin-top: 20px;
+    margin-left: calc(50% - 77px);
+    height: 150px;
+    background-image: url(./assets/img/fotografía/caja-4.jpg);
+    background-size: 150px 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.photo-img5-project{
+    display: inline-block;
+    width: 90%;
+    margin-top: 20px;
+    margin-left: calc(50% - 77px);
+    height: 150px;
+    background-image: url(./assets/img/fotografía/caja-3.jpg);
+    background-size: 150px 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.draw-img1-project{
+    display: inline-block;
+    width: 90%;
+    margin-top: 20px;
+    margin-left: calc(50% - 77px);
+    height: 150px;
+    background-image: url(./assets/img/ilustraciones/Fiorentina\ 002.png);
+    background-size: 150px 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.draw-img2-project{
+    display: inline-block;
+    width: 90%;
+    margin-top: 20px;
+    margin-left: calc(50% - 77px);
+    height: 150px;
+    background-image: url(./assets/img/ilustraciones/Jhoncartoon.png);
+    background-size: 150px 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+}.draw-img3-project{
+    display: inline-block;
+    width: 90%;
+    margin-top: 20px;
+    margin-left: calc(50% - 77px);
+    height: 150px;
+    background-image: url(./assets/img/ilustraciones/me\ cartoon.jpg);
+    background-size: 150px 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+}.draw-img4-project{
+    display: inline-block;
+    width: 90%;
+    margin-top: 20px;
+    margin-left: calc(50% - 77px);
+    height: 150px;
+    background-image: url(./assets/img/ilustraciones/mono\ aullador\ ilustración.jpg);
+    background-size: 150px 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.video-card-container{
+    position: relative;
+    scroll-snap-align: center;
+    width: 70%;
+    min-width: 190px;
+    max-width: 300px;
+    height: 250px;
+    margin: 20px 5px 0;
+    padding: 10px;
+    background-color: var(--grey);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
+}
+.video-card-container video{
+    width: 160px;
+    height: 200px;
+    margin-left: 5px;
+}
+
+.about-me-container{
+    position: relative;
+    width: 100%;
+    height: 870px;
+    background-image: url(./assets/img/fondo\ blanco\ 870\ sobre\ mi.svg);
+}
+.about-me-content-container{
+    position: absolute;
+}
+.about-me-content-container img{
+    width: 200px;
+    margin-top: -40px;
+    margin-left: 55px;
+}
+.about-me-content{
+    width: 90%;
+    min-width: 288px;
+    margin: 0px auto;
+}
+.about-me-content h2{
+    margin-bottom: 10px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: var(--red-brand);
+}
+.about-me-content p{
+    font-size: 1.2rem;
+    color: var(--black);
+}
+.about-me-skills{
+    width: 100%;
+    margin-top: 20px;
+}
+.about-me-skills h3{
+    width: 200px;
+    margin-left: 20px;
+    font-size: 2rem;
+    color: var(--red-brand);
+}
+.flex-skills div{
+    border-bottom: 2px solid var(--dark-blue);
+}
+.about-me-skills span{
+    font-size: 2.4rem;
+    font-weight: 800;
+    color:var(--dark-blue);
+}
+.draw{
+    display: block;
+    width: 300px;
+    height: 40px;
+    margin-top: 20px;
+}
+.draw img{
+    width: 40px;
+    height: 40px;
+    margin-bottom: -10px;
+}
+.ilustrator{
+    display: block;
+    width: 300px;
+    height: 40px;
+    margin-top: 20px;
+}
+.ilustrator img{
+    width: 40px;
+    height: 40px;
+    margin-bottom: -10px;
+}
+.photoshop{
+    display: block;
+    width: 300px;
+    height: 40px;
+    margin-top: 20px;
+}
+.photoshop img{
+    width: 40px;
+    height: 40px;
+    margin-bottom: -10px;
+}
+.after{
+    display: block;
+    width: 300px;
+    height: 40px;
+    margin-top: 20px;
+}
+.after img{
+    width: 40px;
+    height: 40px;
+    margin-bottom: -10px;
+}
+.code{
+    display: block;
+    width: 300px;
+    height: 40px;
+    margin-top: 20px;
+}
+.code img{
+    width: 40px;
+    height: 40px;
+    margin-bottom: -10px;
+}
+
+.container-footer{
+    width: 100%;
+    height: 500px;
+    background-image: url(./assets/img/fondo\ 500px\ proyectos.svg); 
+}
+.contact-headings h2{
+    width: 300px;
+    margin-top: 30px;
+    margin-left: 20px;
+	color: var(--red-brand);
+    font-size: 2rem;
+}
+.container-contact{
+	display:grid;
+	width: 100%;
+    margin-top: 30px;
+	height: 380px;
+    grid-template-columns: 50% 50%;
+}
+.container-contact img{
+    margin-top: 50px;
+    margin-left: 20px;
+	width: 150px;
+}
+.contact-form{
+	width: 100%;
+	display:flex;
+	flex-direction: column;
+	justify-content:center;
+}
+.contact-form h4{
+	font-size: 1.5rem;
+	color: var(--grey);
+	padding: 10px;
+}
+.form {
+	display: flex;
+	flex-direction: column;
+    width: 140px;
+}
+.form input{
+	display: flex;
+	padding: 10px 20px;
+	margin-bottom: 20px;
+	background: none;
+	border: none;
+	border-bottom: 1px solid var(--red-brand);
+	color: var(--just-white);
+}
+.form textarea{
+	display: flex;
+	height: 100px;
+	background: none;
+	color: var(--just-white);
+	padding: 1.5rem;
+	border: 1px solid var(--red-brand);
+}
+.submit {
+	display: flex;
+    margin-top: 20px;
+	padding: 10px 20px;
+	background:var(--red-brand);
+    color: #fff;
+	text-transform: uppercase;
+	border: none;
+	border-radius: 20px;
+	margin-top: 10px;
+	cursor: pointer;
+	box-shadow: 2px 4px 15px -5px rgba(102, 100, 105, 69);
+}
+.submit:hover{
+    background-color: #B3AA9A;
+    color: #000;
+}
+
+footer{
+    position: relative;
+    width: 100%;
+    height: 70px;
+    top: 1180px;
+    background-color: var(--grey);
+}
+.footer-content{
+    position: absolute;
+    display: flex;
+    top: 20px;
+    left: 25px;
+}
+.footer-content h2{
+    font-size: 1.6rem;
+    color: var(--dark-blue);
+}
+.footer-content h4{
+    margin-left: 60px;
+   font-size: 1.2rem;
+   color: #F32424;
+}
